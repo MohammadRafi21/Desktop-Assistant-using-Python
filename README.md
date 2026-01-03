@@ -32,7 +32,7 @@ conda activate assistant1 ##(name of the environment)
 
 ```bash
 
-pip list (to see the version of the python package)
+pip list #(to see the version of the python package)
 
 ```
 
