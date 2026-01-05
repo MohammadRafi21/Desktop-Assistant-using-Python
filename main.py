@@ -53,3 +53,4 @@ def takeCommand():
 #takeCommand()
 text = takeCommand()
 speak(text)
+print("ok")
