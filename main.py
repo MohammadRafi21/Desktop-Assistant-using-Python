@@ -27,6 +27,29 @@ def speak(text):
     engine.say(text)
     engine.runAndWait()
 
-speak("Hello I am a programmer, How are you?")
+#speak("Hello I am a programmer, How are you?")
 
-# 
+# speech recognition function
+def takeCommand():
+    """
+    Docstring for takeCommand
+    this function will recognize voice and return text
+    """ 
+    r = sr.Recognizer()
+    with sr.Microphone() as source:
+        print("Listening..........")
+        r.pause_threshold = 1
+        audio = r.listen(source) # this is using google api converting voice to text
+
+        try:
+            print("Recognizing...........")
+            query = r.recognize_google(audio, language = 'en-in')
+            print(f"user said: {query}\n")
+        except Exception as e:
+            print("Say that again please.......")
+            return "None"
+        return query
+    
+#takeCommand()
+text = takeCommand()
+speak(text)
