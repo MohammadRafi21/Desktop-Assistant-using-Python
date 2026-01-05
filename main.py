@@ -102,6 +102,15 @@ if __name__ == "__main__":
             speak("Opening github")
             webbrowser.open("github.com")
 
+        elif 'time' in query:
+            strTime = datetime.datetime.now().strftime("%H:%M:%S")
+            speak(f"Sir the time is {strTime}")
+
+        elif "goodbye" in query:
+            speak("Ok sir. take care, bye bye")
+            exit()
+
+
 
 
     
