@@ -47,4 +47,3 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-AIzaSyCQcaSKVyq6AlDIiZQcQNqb2x5I2jqE9eg
