@@ -4,7 +4,7 @@ import datetime
 import wikipedia 
 import webbrowser
 import os
-import time
+
 
 
 # Taking voice from my system
@@ -25,11 +25,12 @@ def speak(text):
     
     :param text: the text take string data type
     """
-    engine.stop()
-    engine.say(text)
+    engine.say(str(text))
     engine.runAndWait()
 
 #speak("Hello I am a programmer, How are you?")
+
+
 
 # speech recognition function
 def takeCommand():
@@ -73,7 +74,7 @@ def wish_me():
 if __name__ == "__main__":
 
     wish_me()
-    time.sleep(1)
+    
 
     while True:
 
@@ -84,10 +85,10 @@ if __name__ == "__main__":
             speak("Searching wikipedia")
             query = query.replace('wikipedia','')
             results = wikipedia.summary(query, sentences = 2)
-            time.sleep(0.5)
+           
             speak("According to wikipedia")
             print(results)
-            time.sleep(0.5)
+            
             speak(results)
         
         elif "youtube" in query:

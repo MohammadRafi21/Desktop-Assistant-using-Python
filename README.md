@@ -43,3 +43,8 @@ pip list #(to see the version of the python package)
 pip install -r requirements.txt
 
 ```
+```bash
+streamlit run app.py
+```
+
+AIzaSyCQcaSKVyq6AlDIiZQcQNqb2x5I2jqE9eg
